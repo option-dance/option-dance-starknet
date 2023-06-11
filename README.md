@@ -1,17 +1,18 @@
-# option-dance-starknet
-option dance starknet contracts
+# OptionDance Starknet
+
+OptionDance is a new protocol for users to trade options in simplified strategies abstracting away the complex structuring and sourcing of liquidity behind the scene using smart contracts. Please review our [documentation](https://docs.option.dance) for more details.
 
 
-# development
+## Getting Started
 
-### start starknet-dev node
+0. Start starknet-dev node
 
 ```
 nile node
 ```
 
 
-### compile
+1. Compile
 ```
 nile compile
 ```
