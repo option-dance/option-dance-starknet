@@ -1,0 +1,152 @@
+[
+    {
+        "data": [
+            {
+                "name": "previousOwner",
+                "type": "felt"
+            },
+            {
+                "name": "newOwner",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_owner",
+                "type": "felt"
+            },
+            {
+                "name": "_empiric_oracle",
+                "type": "felt"
+            },
+            {
+                "name": "_oracle",
+                "type": "felt"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "pair_id",
+                "type": "felt"
+            }
+        ],
+        "name": "get_spot_median",
+        "outputs": [
+            {
+                "name": "price",
+                "type": "felt"
+            },
+            {
+                "name": "decimals",
+                "type": "felt"
+            },
+            {
+                "name": "last_updated_timestamp",
+                "type": "felt"
+            },
+            {
+                "name": "num_sources_aggregated",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_oracle",
+        "outputs": [
+            {
+                "name": "oracle",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_empiric_oracle",
+        "outputs": [
+            {
+                "name": "empiric_oracle",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "asset",
+                "type": "felt"
+            },
+            {
+                "name": "expiry_timestamp",
+                "type": "felt"
+            }
+        ],
+        "name": "set_expiry_price_in_oracle",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "new_owner",
+                "type": "felt"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_oracle",
+                "type": "felt"
+            }
+        ],
+        "name": "set_oracle",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_empiric_oracle",
+                "type": "felt"
+            }
+        ],
+        "name": "set_empiric_oracle",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "asset",
+                "type": "felt"
+            },
+            {
+                "name": "pair_id",
+                "type": "felt"
+            }
+        ],
+        "name": "bind_asset_pair_id",
+        "outputs": [],
+        "type": "function"
+    }
+]

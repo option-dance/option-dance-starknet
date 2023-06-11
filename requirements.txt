@@ -1,0 +1,7 @@
+pytest>=7.1.3
+pytest-asyncio>=0
+cairo-lang>=0.10.3
+cairo-nile==0.12.0
+
+starknet-devnet>=0.3.5
+openzeppelin-cairo-contracts==0.4.0b0

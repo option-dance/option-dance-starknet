@@ -1,0 +1,241 @@
+[
+    {
+        "members": [
+            {
+                "name": "price",
+                "offset": 0,
+                "type": "Uint256"
+            },
+            {
+                "name": "timestamp",
+                "offset": 2,
+                "type": "felt"
+            }
+        ],
+        "name": "ExpiryPrice",
+        "size": 3,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "previousOwner",
+                "type": "felt"
+            },
+            {
+                "name": "newOwner",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "pricer",
+                "type": "felt"
+            },
+            {
+                "name": "enabled",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "oracle_pricer_updated",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "dispute_time",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "oracle_dispute_time_updated",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "pricer",
+                "type": "felt"
+            },
+            {
+                "name": "asset",
+                "type": "felt"
+            },
+            {
+                "name": "expiry_timestamp",
+                "type": "felt"
+            },
+            {
+                "name": "expiry_price",
+                "type": "ExpiryPrice"
+            }
+        ],
+        "keys": [],
+        "name": "oracle_expiry_price_updated",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_owner",
+                "type": "felt"
+            },
+            {
+                "name": "_pricer",
+                "type": "felt"
+            },
+            {
+                "name": "_dispute_time",
+                "type": "felt"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "asset",
+                "type": "felt"
+            },
+            {
+                "name": "expiry_timestamp",
+                "type": "felt"
+            }
+        ],
+        "name": "get_expiry_price",
+        "outputs": [
+            {
+                "name": "price",
+                "type": "Uint256"
+            },
+            {
+                "name": "settle_enabled",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "pricer",
+                "type": "felt"
+            }
+        ],
+        "name": "is_pricer",
+        "outputs": [
+            {
+                "name": "enabled",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_dispute_time",
+        "outputs": [
+            {
+                "name": "dispute_time",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "new_owner",
+                "type": "felt"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "dispute_time",
+                "type": "felt"
+            }
+        ],
+        "name": "set_dispute_time",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_pricer",
+                "type": "felt"
+            },
+            {
+                "name": "_enabled",
+                "type": "felt"
+            }
+        ],
+        "name": "set_pricer",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "asset",
+                "type": "felt"
+            },
+            {
+                "name": "expiry_timestamp",
+                "type": "felt"
+            },
+            {
+                "name": "expiry_price",
+                "type": "Uint256"
+            }
+        ],
+        "name": "set_expiry_price",
+        "outputs": [],
+        "type": "function"
+    }
+]
