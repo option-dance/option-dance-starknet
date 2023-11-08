@@ -1,0 +1,12 @@
+[package]
+name = "optiondance"
+version = "0.1.0"
+cairo-version = "2.0.0-rc6"
+description = "optiondance contracts"
+
+[dependencies]
+starknet = "2.0.0-rc6"
+
+
+[cairo]
+sierra-replace-ids = true
