@@ -5,14 +5,20 @@ OptionDance is a new protocol for users to trade options in simplified strategie
 
 ## Getting Started
 
-0. Start starknet-dev node
+### Compiling
 
+using `starknet-compile`  for compiling contracts, e.g.
 ```
-nile node
+starknet-compile --contract-path  optiondance::exchange::Exchange   --allowed-libfuncs-list-name all .  abis/exchange.json
+starknet-compile --contract-path  optiondance::oracle::Oracle  --allowed-libfuncs-list-name all  .  abis/oracle.json
+starknet-compile --contract-path  optiondance::otoken::Otoken  --allowed-libfuncs-list-name all  .  abis/otoken.json
+starknet-compile --contract-path  optiondance::libraries::erc20::ERC20   --allowed-libfuncs-list-name all   .  abis/erc20.json
+starknet-compile --contract-path   optiondance::controller::Controller  --allowed-libfuncs-list-name all  .  abis/controller.json
+starknet-compile --contract-path   optiondance::pragma_pricer::PragmaPricer --allowed-libfuncs-list-name all   .  abis/pragmaPricer.json
+starknet-compile --contract-path   optiondance::mocks::mock_erc20::ERC20   --allowed-libfuncs-list-name all   .  abis/mockERC20.json
 ```
 
-
-1. Compile
+### Running tests
 ```
-nile compile
+scarb test
 ```
