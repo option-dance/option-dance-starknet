@@ -9,7 +9,7 @@ fn compute_hash_on_elements(elements: Array<felt252>) -> felt252 {
     loop {
         match elements_span.pop_front() {
                 Option::Some(word) => {
-                    hash = pedersen(hash, *word);
+                    hash = core::pedersen::pedersen(hash, *word);
                 },
                 Option::None(_) => {
                     break;
@@ -17,7 +17,7 @@ fn compute_hash_on_elements(elements: Array<felt252>) -> felt252 {
             };
     };
     let length = elements.len();
-    return pedersen(hash, length.into());
+    return core::pedersen::pedersen(hash, length.into());
 }
 
 

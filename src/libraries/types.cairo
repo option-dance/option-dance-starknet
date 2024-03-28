@@ -1,6 +1,6 @@
 use starknet::{ContractAddress};
 
-#[derive(Copy, Drop, Serde, storage_access::StorageAccess)]
+#[derive(Copy, Drop, Serde, starknet::Store)]
 struct Instrument {
     id: felt252,               
     name: felt252,
@@ -15,7 +15,7 @@ struct Instrument {
 
 
          
-#[derive(Copy, Drop, Serde, storage_access::StorageAccess)]
+#[derive(Copy, Drop, Serde, starknet::Store)]
 struct ExpiryPrice {
     price: u256,
     timestamp: u64,

@@ -14,7 +14,7 @@ trait IMockPragmaOracle<TContractState> {
     );
 }
 
-#[derive(Copy, Drop, Serde, storage_access::StorageAccess)]
+#[derive(Copy, Drop, Serde, starknet::Store)]
 struct PragmaPricesResponse {
     price: felt252,
     decimals: felt252,

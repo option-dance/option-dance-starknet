@@ -53,6 +53,7 @@ mod Controller {
     use traits::Into;
     use traits::TryInto;
     use option::OptionTrait;
+    use core::starknet::SyscallResultTrait;
     use array::ArrayTrait;
     use zeroable::Zeroable;
 

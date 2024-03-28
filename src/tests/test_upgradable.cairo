@@ -21,7 +21,7 @@ fn test_upgradable() {
 
     // set caller address
     let owner = account(1);
-    set_caller_address(owner);
+    set_contract_address(owner);
 
 
     //deploy a ERC20 token

@@ -1,11 +1,11 @@
 [package]
 name = "optiondance"
 version = "0.1.0"
-cairo-version = "2.0.0-rc6"
+cairo-version = "2.6.2"
 description = "optiondance contracts"
 
 [dependencies]
-starknet = "2.0.0-rc6"
+starknet = "2.6.2"
 
 
 [cairo]
