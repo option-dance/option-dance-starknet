@@ -133,10 +133,12 @@ mod Oracle {
         fn set_dispute_time(ref self: ContractState, dispute_time: u64){
             self.assert_only_owner();
             self.oracle_dispute_time.write(dispute_time);
+            self.emit(Event::oracle_dispute_time_updated(oracle_dispute_time_updated { dispute_time: dispute_time }));
         }
         fn set_price_syncer(ref self: ContractState, price_syncer: ContractAddress, enabled: bool){
             self.assert_only_owner();
             self.oracle_pricer.write(price_syncer, enabled);
+            self.emit(Event::oracle_pricer_updated(oracle_pricer_updated { pricer: price_syncer, enabled: enabled }));
         }
 
         fn set_expiry_price(ref self: ContractState, asset: ContractAddress, expiry_timestamp: u64, expiry_price: u256){

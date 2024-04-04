@@ -269,11 +269,9 @@ mod Exchange {
             assert(filledsell + base_fill_quantity <= sell_order.base_quantity, 'Invalid Order:11');
             assert(fill_price.numerator * buy_order.price.denominator <= buy_order.price.numerator * fill_price.denominator, 'Invalid Order:12');
             assert(sell_order.price.numerator * fill_price.denominator <= fill_price.numerator * sell_order.price.denominator, 'Invalid Order:13');
-            assert(base_fill_quantity <= buy_order.base_quantity, 'Invalid Order:14');
-            assert(base_fill_quantity <= sell_order.base_quantity, 'Invalid Order:15');
             let block_timestamp = get_block_timestamp();
             assert(block_timestamp < buy_order.expiration, 'order expired');
-            assert(block_timestamp < buy_order.expiration, 'order expired');
+            assert(block_timestamp < sell_order.expiration, 'order expired');
             return true;
         }
 
